@@ -1,0 +1,15 @@
+@User
+<section>
+    @{
+        var session_name = ViewData["Session_Name"];
+
+        if(session_name!=null){
+            <p>En session finnes, velkommen @session_name</p>
+        }else {
+            <p>En session finnes enda ikke</p>
+        }
+    };
+    
+    <h1>hello</h1>
+
+</section>

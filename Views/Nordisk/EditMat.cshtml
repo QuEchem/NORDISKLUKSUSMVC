@@ -1,0 +1,21 @@
+@model Mat
+@{
+    ViewData["PageTitle"] = "Rediger";
+}
+<section>
+    <header>
+        <h3>Rediger</h3>
+    </header>
+    <div>
+        <form asp-action="EditMat">
+            <input asp-for="MatId" type="hidden">
+            <label asp-for="Name">Navn
+                <input asp-for="Name" type="text">
+            </label>
+            <label asp-for="ImgSrc">Bildet
+                <input asp-for="ImgSrc" type="text">
+            </label>
+            <input type="submit" value="Save changes">
+        </form>
+    </div>
+</section>

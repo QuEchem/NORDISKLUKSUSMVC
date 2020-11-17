@@ -1,0 +1,22 @@
+@model Mat
+
+<section>
+    <header>
+        <h3>Legg til</h3>
+    </header>
+
+    <div>
+        
+        <form asp-action="CreateMat">
+            <label asp-for="Name">Navn
+                <input asp-for="Name" type="text">
+            </label>
+            <span asp-validation-for="Name" class="val-err"></span>
+            <label asp-for="ImgSrc">Bildet
+                <input asp-for="ImgSrc" type="text">
+            </label>
+            <span asp-validation-for="Name" class="val-err"></span>
+            <input type="submit" value="Legg til">
+        </form>
+    </div>
+</section>

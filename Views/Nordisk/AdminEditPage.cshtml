@@ -1,0 +1,29 @@
+@model IEnumerable<Mat>
+@{
+    ViewData["PageTitle"] = "Admin | Rediger";
+}
+<section id="welcome-section">
+    <h1>Rediger her</h1>
+    <article>
+        <ul id="item-collection">
+            @foreach (var mat in Model)
+            {
+                <li class="item">
+                    <img src="~/img/@mat.ImgSrc" />
+                    <h3>@mat.Name</h3>
+                    <a asp-controller="Nordisk" asp-action="EditMat" asp-route-id="@mat.MatId">Rediger</a>
+                    <a asp-controller="Nordisk" asp-action="DeleteMat" asp-route-id="@mat.MatId">Slett</a>
+                </li>
+            }
+        </ul>
+    </article>
+    <br>
+    <hr>
+    @{
+        <button><a asp-controller="Nordisk" asp-action="CreateMat" asp-route-id="Mat.MatId">Legg til</a></button>
+    }
+</section>
+    
+    
+
+

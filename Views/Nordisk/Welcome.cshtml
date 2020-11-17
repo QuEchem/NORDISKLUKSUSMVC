@@ -1,0 +1,24 @@
+@model IEnumerable<Mat>
+@{
+    ViewData["PageTitle"] = "Velkommen";
+}
+<section id="welcome-section">
+    <h1>Velkommen</h1>
+    <p>Velkommen til Nordisk mat!</p>
+    <article>
+        <h3>Vårtilbud</h3>
+        <ul id="item-collection">
+            @foreach (var mat in Model)
+            {
+                <li class="item">
+                    <img src="~/img/@mat.ImgSrc" />
+                    <h3>@mat.Name</h3>
+                </li>
+            }
+        </ul>
+    </article>
+</section>
+    
+    
+
+

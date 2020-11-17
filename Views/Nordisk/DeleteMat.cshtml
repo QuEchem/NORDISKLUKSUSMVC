@@ -1,0 +1,15 @@
+@model Mat
+
+<section>
+    <header>
+        <h3>Slett</h3>
+    </header>
+
+    <div>
+        <h4>@Html.DisplayFor(mat => mat.Name)</h4>
+        <form asp-action="DeleteMat">
+            <input asp-for="MatId" type="hidden">
+            <input type="submit" value="Slett mat">
+        </form>
+    </div>
+</section>
